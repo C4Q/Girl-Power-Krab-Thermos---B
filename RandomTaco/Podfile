@@ -7,7 +7,7 @@ target 'RandomTaco' do
 
   pod 'Alamofire', '~> 4.2.0'
   pod 'SwiftyJSON'
-  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+  pod 'FoldingCell’, '~> 2.0.2'
 
   # Pods for RandomTaco
 

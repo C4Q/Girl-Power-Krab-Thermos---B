@@ -7,19 +7,29 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
-
+    
+    var theTaco: Taco?
+    let TacoAPIEndPoint = "https://taco-randomizer.herokuapp.com/random"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //theTaco = theTaco?.getData(APIEndPoint: TacoAPIEndPoint)
+        Taco.getData(APIEndPoint: TacoAPIEndPoint, callback: { (taco) in
+            self.theTaco = taco
+        })
+    }
+    
+    @IBAction func tacoButtontapped(_ sender: UIButton) {
+            print(theTaco?.slug)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
+    
+    
+    
 }
 

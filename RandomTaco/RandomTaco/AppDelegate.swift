@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import FoldingCell
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        Alamofire.request("https://taco-randomizer.herokuapp.com/random").responseJSON { (response) in
+//            
+//            if let json = response.result.value {
+//                print("JSON: \(json)")
+//            }
+//        }
+        
+        
         return true
     }
 
